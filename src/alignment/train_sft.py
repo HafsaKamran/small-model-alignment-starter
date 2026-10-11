@@ -157,9 +157,10 @@ def train(model, tokenizer, train_rows, val_rows, args):
     optimizer.zero_grad(set_to_none=True)
 
     # Validation loss of the untrained model, as a reference point for the report.
-    val_loss = evaluate(model, tokenizer, val_rows, args.max_length, args.eval_batch_size, autocast)
-    log_metrics(metrics_path, {"type": "eval", "step": 0, "val_loss": val_loss,
-                               "val_ppl": math.exp(min(val_loss, 50))})
+    # "best" below means best among *trained* checkpoints; step 0 is only a baseline.
+    start_val = evaluate(model, tokenizer, val_rows, args.max_length, args.eval_batch_size, autocast)
+    log_metrics(metrics_path, {"type": "eval", "step": 0, "val_loss": start_val,
+                               "val_ppl": math.exp(min(start_val, 50)), "baseline": True})
 
     done = False
     for epoch in range(args.epochs):
@@ -203,7 +204,9 @@ def train(model, tokenizer, train_rows, val_rows, args):
                 val_loss = evaluate(model, tokenizer, val_rows, args.max_length, args.eval_batch_size, autocast)
                 improved = val_loss < best_val
                 log_metrics(metrics_path, {"type": "eval", "step": step, "val_loss": val_loss,
-                                           "val_ppl": math.exp(min(val_loss, 50)), "new_best": improved})
+                                           "val_ppl": math.exp(min(val_loss, 50)),
+                                           "change_vs_start": val_loss - start_val,
+                                           "best_so_far": improved})
                 if improved:
                     best_val = val_loss
                     save_checkpoint(model, tokenizer, os.path.join(args.output_dir, "best"))
@@ -215,7 +218,7 @@ def train(model, tokenizer, train_rows, val_rows, args):
             break
 
     save_checkpoint(model, tokenizer, os.path.join(args.output_dir, "final"))
-    summary = {"best_val_loss": best_val, "optimizer_steps": step,
+    summary = {"start_val_loss": start_val, "best_val_loss": best_val, "optimizer_steps": step,
                "minutes": round((time.time() - start_time) / 60, 2)}
     with open(os.path.join(args.output_dir, "summary.json"), "w") as f:
         json.dump(summary, f, indent=2)
@@ -234,7 +237,7 @@ def main(argv=None):
 
     tokenizer = AutoTokenizer.from_pretrained(args.model_name)
     # fp32 weights: required for GradScaler; autocast does the fp16 compute.
-    model = AutoModelForCausalLM.from_pretrained(args.model_name, torch_dtype=torch.float32)
+    model = AutoModelForCausalLM.from_pretrained(args.model_name, dtype=torch.float32)
     if args.gradient_checkpointing:
         model.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
 
