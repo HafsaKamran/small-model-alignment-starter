@@ -40,3 +40,12 @@ def build_sft_batch(tokenizer, prompts, responses, max_length):
         "attention_mask": torch.tensor(all_mask, dtype=torch.long),
         "labels": torch.tensor(all_labels, dtype=torch.long),
     }
+    
+    
+def build_dpo_batch(tokenizer, prompts, chosen_responses, rejected_responses, max_length):
+    chosen = build_sft_batch(tokenizer, prompts, chosen_responses, max_length)
+    rejected = build_sft_batch(tokenizer, prompts, rejected_responses, max_length)
+    return {
+        "chosen": chosen,
+        "rejected": rejected
+    }

@@ -3,3 +3,4 @@ outputs/
 .venv/
 .pytest_cache/
 *.py[cod]
+sft_run_outputs.zip
