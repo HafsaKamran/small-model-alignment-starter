@@ -4,3 +4,4 @@ outputs/
 .pytest_cache/
 *.py[cod]
 sft_run_outputs.zip
+*.egg-info/

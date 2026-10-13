@@ -41,7 +41,7 @@ def compute_dpo_loss_from_logps(
 ):
     """Return the scalar mean DPO objective from per-example log probabilities."""
     from src.alignment.losses import compute_dpo_loss_from_logps as _impl
-    return _impl(policy_rejected_logps, policy_rejected_logps, reference_rejected_logps, reference_rejected_logps, beta)
+    return _impl(policy_chosen_logps, policy_rejected_logps, reference_chosen_logps, reference_rejected_logps, beta)
 
 
 def compute_dpo_loss(
