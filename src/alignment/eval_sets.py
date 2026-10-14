@@ -14,6 +14,9 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fi
 EVAL_SETS = {
     "alpaca": os.path.join(REPO_ROOT, "eval_sets", "alpaca_eval_300_seed42.json"),
     "hh": os.path.join(REPO_ROOT, "eval_sets", "hh_rlhf_eval_300_seed42.json"),
+    # 40 hand-written prompts (10 each: cooking, coding, general_help, safety_sensitive) for the
+    # persona LoRA track, checked to share no topic with data/persona_lora/ training prompts.
+    "persona": os.path.join(REPO_ROOT, "eval_sets", "persona_style_eval_40.json"),
 }
 
 
