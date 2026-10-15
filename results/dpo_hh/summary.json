@@ -1,0 +1,7 @@
+{
+  "track": "hh",
+  "best_val_reward_acc": 0.651,
+  "optimizer_steps": 469,
+  "skipped_steps": 3,
+  "minutes": 105.0
+}

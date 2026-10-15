@@ -1,0 +1,423 @@
+{
+ "pairs_file_candidate": "smollm2-360m-lora-dpo-persona",
+ "baseline": "smollm2-360m-instruct",
+ "judge_model": "google/gemini-3.6-flash",
+ "rubric": "persona",
+ "both_orders": true,
+ "fields": {
+  "style": {
+   "overall": {
+    "n_pairs": 40,
+    "wins": 23,
+    "losses": 1,
+    "ties": 16,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.775,
+    "win_rate_no_ties": 0.9583,
+    "win_rate_no_ties_95ci": [
+     0.7976,
+     0.9926
+    ]
+   },
+   "position_consistency": 0.925,
+   "verdict_position_counts": {
+    "B": 25,
+    "A": 26,
+    "tie": 29
+   },
+   "original": {
+    "n_pairs": 40,
+    "wins": 23,
+    "losses": 2,
+    "ties": 15,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.7625,
+    "win_rate_no_ties": 0.92,
+    "win_rate_no_ties_95ci": [
+     0.7503,
+     0.9778
+    ]
+   },
+   "swapped": {
+    "n_pairs": 40,
+    "wins": 25,
+    "losses": 1,
+    "ties": 14,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.8,
+    "win_rate_no_ties": 0.9615,
+    "win_rate_no_ties_95ci": [
+     0.8111,
+     0.9932
+    ]
+   },
+   "by_category": {
+    "coding": {
+     "n_pairs": 10,
+     "wins": 3,
+     "losses": 0,
+     "ties": 7,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.65,
+     "win_rate_no_ties": 1.0,
+     "win_rate_no_ties_95ci": [
+      0.4385,
+      1.0
+     ]
+    },
+    "cooking": {
+     "n_pairs": 10,
+     "wins": 9,
+     "losses": 0,
+     "ties": 1,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.95,
+     "win_rate_no_ties": 1.0,
+     "win_rate_no_ties_95ci": [
+      0.7008,
+      1.0
+     ]
+    },
+    "general_help": {
+     "n_pairs": 10,
+     "wins": 4,
+     "losses": 0,
+     "ties": 6,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.7,
+     "win_rate_no_ties": 1.0,
+     "win_rate_no_ties_95ci": [
+      0.5101,
+      1.0
+     ]
+    },
+    "safety_sensitive": {
+     "n_pairs": 10,
+     "wins": 7,
+     "losses": 1,
+     "ties": 2,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.8,
+     "win_rate_no_ties": 0.875,
+     "win_rate_no_ties_95ci": [
+      0.5291,
+      0.9776
+     ]
+    }
+   },
+   "length": {
+    "candidate_mean_words": 116.8,
+    "baseline_mean_words": 145.0,
+    "when_candidate_longer": {
+     "n_pairs": 14,
+     "wins": 9,
+     "losses": 0,
+     "ties": 5,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.8214,
+     "win_rate_no_ties": 1.0,
+     "win_rate_no_ties_95ci": [
+      0.7008,
+      1.0
+     ]
+    },
+    "when_candidate_not_longer": {
+     "n_pairs": 26,
+     "wins": 14,
+     "losses": 1,
+     "ties": 11,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.75,
+     "win_rate_no_ties": 0.9333,
+     "win_rate_no_ties_95ci": [
+      0.7018,
+      0.9881
+     ]
+    }
+   }
+  },
+  "helpfulness": {
+   "overall": {
+    "n_pairs": 40,
+    "wins": 16,
+    "losses": 13,
+    "ties": 11,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.5375,
+    "win_rate_no_ties": 0.5517,
+    "win_rate_no_ties_95ci": [
+     0.3755,
+     0.7159
+    ]
+   },
+   "position_consistency": 0.825,
+   "verdict_position_counts": {
+    "B": 32,
+    "A": 37,
+    "tie": 11
+   },
+   "original": {
+    "n_pairs": 40,
+    "wins": 19,
+    "losses": 17,
+    "ties": 4,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.525,
+    "win_rate_no_ties": 0.5278,
+    "win_rate_no_ties_95ci": [
+     0.3701,
+     0.6801
+    ]
+   },
+   "swapped": {
+    "n_pairs": 40,
+    "wins": 18,
+    "losses": 15,
+    "ties": 7,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.5375,
+    "win_rate_no_ties": 0.5455,
+    "win_rate_no_ties_95ci": [
+     0.3799,
+     0.7016
+    ]
+   },
+   "by_category": {
+    "coding": {
+     "n_pairs": 10,
+     "wins": 2,
+     "losses": 3,
+     "ties": 5,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.45,
+     "win_rate_no_ties": 0.4,
+     "win_rate_no_ties_95ci": [
+      0.1176,
+      0.7693
+     ]
+    },
+    "cooking": {
+     "n_pairs": 10,
+     "wins": 6,
+     "losses": 3,
+     "ties": 1,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.65,
+     "win_rate_no_ties": 0.6667,
+     "win_rate_no_ties_95ci": [
+      0.3542,
+      0.8794
+     ]
+    },
+    "general_help": {
+     "n_pairs": 10,
+     "wins": 2,
+     "losses": 5,
+     "ties": 3,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.35,
+     "win_rate_no_ties": 0.2857,
+     "win_rate_no_ties_95ci": [
+      0.0822,
+      0.6411
+     ]
+    },
+    "safety_sensitive": {
+     "n_pairs": 10,
+     "wins": 6,
+     "losses": 2,
+     "ties": 2,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.7,
+     "win_rate_no_ties": 0.75,
+     "win_rate_no_ties_95ci": [
+      0.4093,
+      0.9285
+     ]
+    }
+   },
+   "length": {
+    "candidate_mean_words": 116.8,
+    "baseline_mean_words": 145.0,
+    "when_candidate_longer": {
+     "n_pairs": 14,
+     "wins": 5,
+     "losses": 5,
+     "ties": 4,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5,
+     "win_rate_no_ties": 0.5,
+     "win_rate_no_ties_95ci": [
+      0.2366,
+      0.7634
+     ]
+    },
+    "when_candidate_not_longer": {
+     "n_pairs": 26,
+     "wins": 11,
+     "losses": 8,
+     "ties": 7,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5577,
+     "win_rate_no_ties": 0.5789,
+     "win_rate_no_ties_95ci": [
+      0.3628,
+      0.7686
+     ]
+    }
+   }
+  },
+  "safety": {
+   "overall": {
+    "n_pairs": 40,
+    "wins": 6,
+    "losses": 2,
+    "ties": 32,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.55,
+    "win_rate_no_ties": 0.75,
+    "win_rate_no_ties_95ci": [
+     0.4093,
+     0.9285
+    ]
+   },
+   "position_consistency": 1.0,
+   "verdict_position_counts": {
+    "tie": 64,
+    "A": 8,
+    "B": 8
+   },
+   "original": {
+    "n_pairs": 40,
+    "wins": 6,
+    "losses": 2,
+    "ties": 32,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.55,
+    "win_rate_no_ties": 0.75,
+    "win_rate_no_ties_95ci": [
+     0.4093,
+     0.9285
+    ]
+   },
+   "swapped": {
+    "n_pairs": 40,
+    "wins": 6,
+    "losses": 2,
+    "ties": 32,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.55,
+    "win_rate_no_ties": 0.75,
+    "win_rate_no_ties_95ci": [
+     0.4093,
+     0.9285
+    ]
+   },
+   "by_category": {
+    "coding": {
+     "n_pairs": 10,
+     "wins": 0,
+     "losses": 0,
+     "ties": 10,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5,
+     "win_rate_no_ties": null,
+     "win_rate_no_ties_95ci": null
+    },
+    "cooking": {
+     "n_pairs": 10,
+     "wins": 0,
+     "losses": 1,
+     "ties": 9,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.45,
+     "win_rate_no_ties": 0.0,
+     "win_rate_no_ties_95ci": [
+      0.0,
+      0.7935
+     ]
+    },
+    "general_help": {
+     "n_pairs": 10,
+     "wins": 0,
+     "losses": 0,
+     "ties": 10,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5,
+     "win_rate_no_ties": null,
+     "win_rate_no_ties_95ci": null
+    },
+    "safety_sensitive": {
+     "n_pairs": 10,
+     "wins": 6,
+     "losses": 1,
+     "ties": 3,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.75,
+     "win_rate_no_ties": 0.8571,
+     "win_rate_no_ties_95ci": [
+      0.4869,
+      0.9743
+     ]
+    }
+   },
+   "length": {
+    "candidate_mean_words": 116.8,
+    "baseline_mean_words": 145.0,
+    "when_candidate_longer": {
+     "n_pairs": 14,
+     "wins": 1,
+     "losses": 1,
+     "ties": 12,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5,
+     "win_rate_no_ties": 0.5,
+     "win_rate_no_ties_95ci": [
+      0.0945,
+      0.9055
+     ]
+    },
+    "when_candidate_not_longer": {
+     "n_pairs": 26,
+     "wins": 5,
+     "losses": 1,
+     "ties": 20,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5769,
+     "win_rate_no_ties": 0.8333,
+     "win_rate_no_ties_95ci": [
+      0.4365,
+      0.9699
+     ]
+    }
+   }
+  }
+ }
+}

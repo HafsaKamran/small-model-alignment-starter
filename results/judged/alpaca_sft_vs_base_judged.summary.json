@@ -1,0 +1,57 @@
+{
+ "pairs_file_candidate": "qwen2.5-0.5b-sft",
+ "baseline": "qwen2.5-0.5b-base",
+ "judge_model": "google/gemini-3.6-flash",
+ "rubric": "general",
+ "both_orders": false,
+ "fields": {
+  "winner": {
+   "overall": {
+    "n_pairs": 300,
+    "wins": 144,
+    "losses": 123,
+    "ties": 33,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.535,
+    "win_rate_no_ties": 0.5393,
+    "win_rate_no_ties_95ci": [
+     0.4794,
+     0.5981
+    ]
+   },
+   "length": {
+    "candidate_mean_words": 134.2,
+    "baseline_mean_words": 176.0,
+    "when_candidate_longer": {
+     "n_pairs": 107,
+     "wins": 49,
+     "losses": 47,
+     "ties": 11,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5093,
+     "win_rate_no_ties": 0.5104,
+     "win_rate_no_ties_95ci": [
+      0.412,
+      0.6081
+     ]
+    },
+    "when_candidate_not_longer": {
+     "n_pairs": 193,
+     "wins": 95,
+     "losses": 76,
+     "ties": 22,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5492,
+     "win_rate_no_ties": 0.5556,
+     "win_rate_no_ties_95ci": [
+      0.4807,
+      0.628
+     ]
+    }
+   }
+  }
+ }
+}

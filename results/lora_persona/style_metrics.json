@@ -1,0 +1,82 @@
+[
+ {
+  "model": "base",
+  "category": "cooking",
+  "responses_with_marker": 0.0,
+  "markers_per_100_words": 0.0,
+  "exclamations_per_response": 0.2,
+  "mean_words": 123.7
+ },
+ {
+  "model": "base",
+  "category": "ALL",
+  "responses_with_marker": 0.075,
+  "markers_per_100_words": 0.053323853537148955,
+  "exclamations_per_response": 0.125,
+  "mean_words": 140.65
+ },
+ {
+  "model": "base",
+  "category": "coding",
+  "responses_with_marker": 0.0,
+  "markers_per_100_words": 0.0,
+  "exclamations_per_response": 0.0,
+  "mean_words": 140.1
+ },
+ {
+  "model": "base",
+  "category": "general_help",
+  "responses_with_marker": 0.1,
+  "markers_per_100_words": 0.07158196134574088,
+  "exclamations_per_response": 0.1,
+  "mean_words": 139.7
+ },
+ {
+  "model": "base",
+  "category": "safety_sensitive",
+  "responses_with_marker": 0.2,
+  "markers_per_100_words": 0.1257071024512885,
+  "exclamations_per_response": 0.2,
+  "mean_words": 159.1
+ },
+ {
+  "model": "LoRA-DPO",
+  "category": "cooking",
+  "responses_with_marker": 0.0,
+  "markers_per_100_words": 0.0,
+  "exclamations_per_response": 2.9,
+  "mean_words": 121.9
+ },
+ {
+  "model": "LoRA-DPO",
+  "category": "ALL",
+  "responses_with_marker": 0.175,
+  "markers_per_100_words": 0.19624945486262538,
+  "exclamations_per_response": 3.625,
+  "mean_words": 114.65
+ },
+ {
+  "model": "LoRA-DPO",
+  "category": "coding",
+  "responses_with_marker": 0.2,
+  "markers_per_100_words": 0.16,
+  "exclamations_per_response": 2.3,
+  "mean_words": 125.0
+ },
+ {
+  "model": "LoRA-DPO",
+  "category": "general_help",
+  "responses_with_marker": 0.2,
+  "markers_per_100_words": 0.26714158504007124,
+  "exclamations_per_response": 3.1,
+  "mean_words": 112.3
+ },
+ {
+  "model": "LoRA-DPO",
+  "category": "safety_sensitive",
+  "responses_with_marker": 0.3,
+  "markers_per_100_words": 0.4024144869215292,
+  "exclamations_per_response": 6.2,
+  "mean_words": 99.4
+ }
+]

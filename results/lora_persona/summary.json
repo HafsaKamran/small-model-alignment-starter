@@ -1,0 +1,22 @@
+{
+ "train_pairs": 198,
+ "val_pairs": 22,
+ "trainable_params": 8683520,
+ "total_params": 370504640,
+ "optimizer_steps": 75,
+ "minutes": 1.43,
+ "step0_eval": {
+  "eval_loss": 0.6931473016738892,
+  "eval_model_preparation_time": 0.0204,
+  "eval_runtime": 2.1943,
+  "eval_samples_per_second": 10.026,
+  "eval_steps_per_second": 2.734
+ },
+ "final_eval": {
+  "eval_loss": 0.13488151133060455,
+  "eval_model_preparation_time": 0.0204,
+  "eval_runtime": 1.3458,
+  "eval_samples_per_second": 16.347,
+  "eval_steps_per_second": 4.458
+ }
+}

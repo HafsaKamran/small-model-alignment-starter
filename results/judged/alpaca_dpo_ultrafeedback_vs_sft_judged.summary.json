@@ -1,0 +1,91 @@
+{
+ "pairs_file_candidate": "qwen2.5-0.5b-dpo-ultrafeedback",
+ "baseline": "qwen2.5-0.5b-sft",
+ "judge_model": "google/gemini-3.6-flash",
+ "rubric": "general",
+ "both_orders": true,
+ "fields": {
+  "winner": {
+   "overall": {
+    "n_pairs": 300,
+    "wins": 97,
+    "losses": 78,
+    "ties": 125,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.5317,
+    "win_rate_no_ties": 0.5543,
+    "win_rate_no_ties_95ci": [
+     0.4803,
+     0.626
+    ]
+   },
+   "position_consistency": 0.66,
+   "verdict_position_counts": {
+    "B": 190,
+    "tie": 81,
+    "A": 329
+   },
+   "original": {
+    "n_pairs": 300,
+    "wins": 131,
+    "losses": 130,
+    "ties": 39,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.5017,
+    "win_rate_no_ties": 0.5019,
+    "win_rate_no_ties_95ci": [
+     0.4417,
+     0.5621
+    ]
+   },
+   "swapped": {
+    "n_pairs": 300,
+    "wins": 142,
+    "losses": 116,
+    "ties": 42,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.5433,
+    "win_rate_no_ties": 0.5504,
+    "win_rate_no_ties_95ci": [
+     0.4894,
+     0.6099
+    ]
+   },
+   "length": {
+    "candidate_mean_words": 202.1,
+    "baseline_mean_words": 134.2,
+    "when_candidate_longer": {
+     "n_pairs": 254,
+     "wins": 83,
+     "losses": 71,
+     "ties": 100,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5236,
+     "win_rate_no_ties": 0.539,
+     "win_rate_no_ties_95ci": [
+      0.4602,
+      0.6158
+     ]
+    },
+    "when_candidate_not_longer": {
+     "n_pairs": 46,
+     "wins": 14,
+     "losses": 7,
+     "ties": 25,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5761,
+     "win_rate_no_ties": 0.6667,
+     "win_rate_no_ties_95ci": [
+      0.4537,
+      0.8281
+     ]
+    }
+   }
+  }
+ }
+}

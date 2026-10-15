@@ -1,0 +1,10 @@
+{
+ "model_name": "HuggingFaceTB/SmolLM2-360M-Instruct",
+ "adapter_path": null,
+ "generator": "smollm2-360m-instruct",
+ "dtype": "float16",
+ "max_new_tokens": 256,
+ "repetition_penalty": 1.1,
+ "do_sample": false,
+ "prompt_format": "tokenizer chat template"
+}

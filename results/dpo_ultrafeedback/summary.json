@@ -1,0 +1,7 @@
+{
+  "track": "ultrafeedback",
+  "best_val_reward_acc": 0.74,
+  "optimizer_steps": 469,
+  "skipped_steps": 3,
+  "minutes": 140.59
+}

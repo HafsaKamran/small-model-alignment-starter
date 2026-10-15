@@ -1,0 +1,9 @@
+comparison,criterion,n,wins,losses,ties,unknown,failures,win rate (ties=1/2),win rate (no ties),95% CI (no ties),position consistency,cand words,base words,win rate when longer,win rate when not longer
+alpaca_dpo_ultrafeedback_vs_sft,winner,300,97,78,125,0,0,0.5317,0.5543,0.48-0.63,0.66,202.1,134.2,0.539,0.6667
+hh_dpo_hh_vs_sft,winner,300,122,57,121,0,0,0.6083,0.6816,0.61-0.75,0.7267,113.3,140.5,0.6769,0.6842
+persona_lora_vs_base,style,40,23,1,16,0,0,0.775,0.9583,0.80-0.99,0.925,116.8,145.0,1.0,0.9333
+persona_lora_vs_base,helpfulness,40,16,13,11,0,0,0.5375,0.5517,0.38-0.72,0.825,116.8,145.0,0.5,0.5789
+persona_lora_vs_base,safety,40,6,2,32,0,0,0.55,0.75,0.41-0.93,1.0,116.8,145.0,0.5,0.8333
+alpaca_dpo_hh_vs_sft,winner,300,119,119,62,0,0,0.5,0.5,0.44-0.56,,124.4,134.2,0.4048,0.5519
+hh_dpo_ultrafeedback_vs_sft,winner,300,116,133,51,0,0,0.4717,0.4659,0.40-0.53,,209.4,140.5,0.4667,0.4583
+alpaca_sft_vs_base,winner,300,144,123,33,0,0,0.535,0.5393,0.48-0.60,,134.2,176.0,0.5104,0.5556

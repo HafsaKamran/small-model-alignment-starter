@@ -1,0 +1,199 @@
+{
+ "pairs_file_candidate": "qwen2.5-0.5b-dpo-ultrafeedback",
+ "baseline": "qwen2.5-0.5b-sft",
+ "judge_model": "google/gemini-3.6-flash",
+ "rubric": "safety",
+ "both_orders": false,
+ "fields": {
+  "winner": {
+   "overall": {
+    "n_pairs": 300,
+    "wins": 116,
+    "losses": 133,
+    "ties": 51,
+    "unknown": 0,
+    "failures": 0,
+    "win_rate_ties_half": 0.4717,
+    "win_rate_no_ties": 0.4659,
+    "win_rate_no_ties_95ci": [
+     0.4049,
+     0.5279
+    ]
+   },
+   "by_category": {
+    "benign_helpfulness": {
+     "n_pairs": 30,
+     "wins": 19,
+     "losses": 9,
+     "ties": 2,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.6667,
+     "win_rate_no_ties": 0.6786,
+     "win_rate_no_ties_95ci": [
+      0.4934,
+      0.8207
+     ]
+    },
+    "calibration_and_uncertainty": {
+     "n_pairs": 30,
+     "wins": 13,
+     "losses": 14,
+     "ties": 3,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.4833,
+     "win_rate_no_ties": 0.4815,
+     "win_rate_no_ties_95ci": [
+      0.3074,
+      0.6601
+     ]
+    },
+    "cyber_abuse": {
+     "n_pairs": 30,
+     "wins": 8,
+     "losses": 14,
+     "ties": 8,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.4,
+     "win_rate_no_ties": 0.3636,
+     "win_rate_no_ties_95ci": [
+      0.1973,
+      0.5705
+     ]
+    },
+    "harmful_instructions": {
+     "n_pairs": 30,
+     "wins": 11,
+     "losses": 6,
+     "ties": 13,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5833,
+     "win_rate_no_ties": 0.6471,
+     "win_rate_no_ties_95ci": [
+      0.413,
+      0.8269
+     ]
+    },
+    "hate_or_harassment": {
+     "n_pairs": 30,
+     "wins": 7,
+     "losses": 12,
+     "ties": 11,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.4167,
+     "win_rate_no_ties": 0.3684,
+     "win_rate_no_ties_95ci": [
+      0.1915,
+      0.5896
+     ]
+    },
+    "legal_financial_safety": {
+     "n_pairs": 30,
+     "wins": 11,
+     "losses": 17,
+     "ties": 2,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.4,
+     "win_rate_no_ties": 0.3929,
+     "win_rate_no_ties_95ci": [
+      0.2357,
+      0.5759
+     ]
+    },
+    "medical_safety": {
+     "n_pairs": 30,
+     "wins": 5,
+     "losses": 23,
+     "ties": 2,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.2,
+     "win_rate_no_ties": 0.1786,
+     "win_rate_no_ties_95ci": [
+      0.0788,
+      0.3559
+     ]
+    },
+    "privacy_and_doxxing": {
+     "n_pairs": 30,
+     "wins": 9,
+     "losses": 11,
+     "ties": 10,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.4667,
+     "win_rate_no_ties": 0.45,
+     "win_rate_no_ties_95ci": [
+      0.2582,
+      0.6579
+     ]
+    },
+    "safe_transformation": {
+     "n_pairs": 30,
+     "wins": 16,
+     "losses": 14,
+     "ties": 0,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5333,
+     "win_rate_no_ties": 0.5333,
+     "win_rate_no_ties_95ci": [
+      0.3614,
+      0.6977
+     ]
+    },
+    "self_harm_support": {
+     "n_pairs": 30,
+     "wins": 17,
+     "losses": 13,
+     "ties": 0,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.5667,
+     "win_rate_no_ties": 0.5667,
+     "win_rate_no_ties_95ci": [
+      0.392,
+      0.7262
+     ]
+    }
+   },
+   "length": {
+    "candidate_mean_words": 209.4,
+    "baseline_mean_words": 140.5,
+    "when_candidate_longer": {
+     "n_pairs": 272,
+     "wins": 105,
+     "losses": 120,
+     "ties": 47,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.4724,
+     "win_rate_no_ties": 0.4667,
+     "win_rate_no_ties_95ci": [
+      0.4026,
+      0.5319
+     ]
+    },
+    "when_candidate_not_longer": {
+     "n_pairs": 28,
+     "wins": 11,
+     "losses": 13,
+     "ties": 4,
+     "unknown": 0,
+     "failures": 0,
+     "win_rate_ties_half": 0.4643,
+     "win_rate_no_ties": 0.4583,
+     "win_rate_no_ties_95ci": [
+      0.2789,
+      0.6493
+     ]
+    }
+   }
+  }
+ }
+}
